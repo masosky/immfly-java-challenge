@@ -14,6 +14,9 @@ Now run the tests:
 
 ```mvn clean test -Plocaltest```
 
+## Coverage
+```mvn clean test && mvn jacoco:report```
+
 
 ## Production
 1
