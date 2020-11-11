@@ -33,8 +33,8 @@
                 <version>2.3.5.RELEASE</version>
                 <configuration>
                     <profiles>
-                        <profile>local</profile>
                         <profile>localtest</profile>
+                        <profile>production</profile>
                     </profiles>
                 </configuration>
             </plugin>
