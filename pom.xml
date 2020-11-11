@@ -13,17 +13,17 @@
         <version>2.3.5.RELEASE</version>
     </parent>
 
-    <description/>
+    <description>Immfly Java Challenge</description>
     <developers>
-        <developer/>
+        <developer>
+            <email>xavier.mas.le@gmail.com</email>
+            <name>Xavier Mas Leszkiewicz</name>
+            <roles>
+                <role>Software Engineer</role>
+            </roles>
+            <url>https://xaviermasle.com</url>
+        </developer>
     </developers>
-    <licenses>
-        <license/>
-    </licenses>
-    <scm>
-        <url/>
-    </scm>
-    <url/>
 
     <build>
         <plugins>
