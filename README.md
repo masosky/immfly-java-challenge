@@ -1,6 +1,6 @@
 # immfly-java-challenge
 
-## Dev
+## Local
 ```docker-compose -f docker-compose-local.yml up```
 
 ```mvn spring-boot:run -Plocaltest```
