@@ -5,8 +5,12 @@
 
 ```mvn spring-boot:run -Plocaltest```
 
+Now you can access a URL like ```http://localhost:8080/v1/flight-information/1/2```
+
 ## Test
 ```docker-compose -f docker-compose-local.yml up```
+
+Now run the tests:
 
 ```mvn clean test -Plocaltest```
 
