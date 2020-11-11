@@ -1,7 +1,6 @@
 package com.immfly.api.fights;
 
 import com.immfly.redis.RedisService;
-import com.immfly.redis.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import redis.clients.jedis.Jedis;
@@ -16,6 +15,7 @@ public class FlightApiController implements FlightApiContract {
     @ResponseBody
     public String getFlight(@PathVariable("tail-number") String tailNumber, @PathVariable("flight-number") String flightNumber) {
         Jedis jedis = redisService.getJedisInstance();
+        // TODO go to Redis Cache and retrieve flights
         return tailNumber + flightNumber;
     }
 }
