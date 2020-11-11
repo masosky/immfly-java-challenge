@@ -96,17 +96,17 @@
 
     <profiles>
         <profile>
-            <id>local</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+            <id>production</id>
             <properties>
-                <build.profile.id>local</build.profile.id>
-                <profileActive>local</profileActive>
+                <build.profile.id>production</build.profile.id>
+                <profileActive>production</profileActive>
             </properties>
         </profile>
         <profile>
             <id>localtest</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <build.profile.id>localtest</build.profile.id>
                 <profileActive>localtest</profileActive>

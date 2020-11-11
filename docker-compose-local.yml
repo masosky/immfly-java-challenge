@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  redis-local:
+    container_name: redis-local
+    image: "redis:alpine"
+    command: redis-server --requirepass xkav7KNwwpXXM2v6
+    ports:
+      - "6379:6379"
+    volumes:
+      - $PWD/redis-data:/var/lib/redis
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+  redis-commander-local:
+    container_name: redis-commander-local
+    image: rediscommander/redis-commander
+    restart: always
+    environment:
+      - REDIS_HOST=redis-local
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=xkav7KNwwpXXM2v6
+    ports:
+      - "8081:8081"
+    links:
+      - "redis-local"
