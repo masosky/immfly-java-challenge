@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  redis:
+    container_name: redis
+    image: "redis:alpine"
+    command: redis-server --requirepass xkav7KNwwpXXM2v6
+    ports:
+      - "6379:6379"
+    volumes:
+      - $PWD/redis-data:/var/lib/redis
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+  application:
+    container_name: application
+    build: .
+    ports:
+      - "8080:8080"
+    links:
+      - "redis"
+
