@@ -1,0 +1,5 @@
+.idea
+logs
+redis-data
+target
+immfly-java-challenge.iml
