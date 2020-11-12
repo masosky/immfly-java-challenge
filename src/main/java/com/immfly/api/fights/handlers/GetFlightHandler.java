@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -35,7 +34,6 @@ public class GetFlightHandler {
     public Object handleGetFlight(final String tailNumber, final String flightNumber) {
         // We are getting the flight in Redis (Hash Type). <String, Map<String, String>>. Stored as <TailNumber, <FlightNumber, FlightInformation>>
         String flightInformation = jedis.hget(tailNumber, flightNumber);
-
         if (flightInformation == null) {
             // Flight is not in Redis, we call the external service and try to store it in Redis Cache.
             List<FlightInformationResponse> flightInformationResponseList = externalFlightService.getFlights(tailNumber);

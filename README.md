@@ -1,7 +1,7 @@
 # immfly-java-challenge
 
 ## Introduction
-I know there are several ways to improve this, but I have dedicated a lot of time in order to make it.
+I know there are several ways to improve this, but I have dedicated a lot of time in order to make it professional.
 Please read the instructions carefully and if you have question do not hesitate to contact me. Developer information has been set on pom.xml
 
 ## Architecture
@@ -11,6 +11,7 @@ Starts the Spring Boot Application
 Provides a Singleton Instances that contains a Jedis Client
 ### ExternalFlightService.java
 This class simulates a Real API that provides information of FLights. In order to make it simpler the class is loading the information of some properties files and store it on its cache.
+I could have implemented MockServer but with these we can use it in tests and in local.
 ### FlightInformationResponse.java
 This class has been annotated with @JsonSerialize in order to use it with ObjectMapper from Jackson.
 It emulates the Serializer of a API JSON Response
@@ -56,12 +57,12 @@ You can access Redis Commander and check all the Redis keys through:
 
 ```http://localhost:8081/```
 
-### Production
+### Local All Dockerized
 This environment simulates all the services inside Docker.
 
 Steps:
 
-```mvn clean package -Pproduction```
+```mvn clean package -Plocaltest```
 
 
 ```docker-compose build --no-cache```

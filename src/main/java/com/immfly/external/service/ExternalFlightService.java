@@ -2,7 +2,6 @@ package com.immfly.external.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.immfly.external.service.response.FlightInformationResponse;
-import com.immfly.redis.RedisService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -12,6 +11,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.*;
 
 /**
@@ -31,11 +31,12 @@ public class ExternalFlightService {
         for (final String tailNumber:TAIL_NUMBER_LIST) {
             try {
                 Resource resource = new ClassPathResource(tailNumber + ".json");
-                File file = resource.getFile();
-                FlightInformationResponse[] flightInformationList = OBJECT_MAPPER.readValue(file, FlightInformationResponse[].class);
+                InputStream inputStream = resource.getInputStream();
+                logger.debug("Loading file " + resource.getFilename());
+                FlightInformationResponse[] flightInformationList = OBJECT_MAPPER.readValue(inputStream, FlightInformationResponse[].class);
                 FLIGHTS_INFORMATION.put(tailNumber, Arrays.asList(flightInformationList));
             } catch (Exception e) {
-                logger.error("Error when loading FlightInformation Resources in Cache");
+                logger.error("Error when loading FlightInformation Resources in Cache", e);
             }
         }
         logger.debug("All FlightInformation Resources ahs been loaded successfully in Cache");
