@@ -14,7 +14,7 @@ Please read the instructions carefully and if you have question do not hesitate 
 ### Main.java
 Starts the Spring Boot Application
 ### RedisService.java
-Provides a Singleton Instances that contains a Jedis Client
+Provides a Singleton Instance that contains a Jedis Client
 ### ExternalFlightService.java
 This class simulates a Real API that provides information of FLights. In order to make it simpler the class is loading the information of some properties files and store it on its cache.
 I could have implemented MockServer but with these we can use it in tests and in local.
