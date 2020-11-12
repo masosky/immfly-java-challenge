@@ -77,6 +77,7 @@ Steps:
 
 ## Test and Coverage
 ### Test
+Coverage is OK but should be a higher. Due a lack of time I cannot cover all tests.
 We must run the docker-compose-local environment. Tests are using a dockerized Redis instance.
 
 Redis has not been mocked in order to make the tests closer to a production environment.
