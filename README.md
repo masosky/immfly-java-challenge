@@ -79,6 +79,18 @@ Steps:
 
 ```docker-compose up```
 
+## Checkstyle
+Not applied due a lack of time
+
+## PMD
+Not applied due a lack of time
+
+## Findbugs
+Not applied due a lack of time
+
+## Mutation testing
+Not applied due a lack of time
+
 ## Test and Coverage
 ### Test
 Coverage is OK but should be higher. Due a lack of time I cannot cover all tests.
