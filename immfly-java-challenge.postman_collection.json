@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "246321ef-c69e-4d6a-89f1-d24b9710828b",
+		"name": "immfly-java-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EC-AIN 653",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-flight-information}}/EC-AIN/653",
+					"host": [
+						"{{api-flight-information}}"
+					],
+					"path": [
+						"EC-AIN",
+						"653"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EC-AIN 654",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-flight-information}}/EC-AIN/654",
+					"host": [
+						"{{api-flight-information}}"
+					],
+					"path": [
+						"EC-AIN",
+						"654"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EC-CGS 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-flight-information}}/EC-CGS/1",
+					"host": [
+						"{{api-flight-information}}"
+					],
+					"path": [
+						"EC-CGS",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EC-CGS 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-flight-information}}/EC-CGS/2",
+					"host": [
+						"{{api-flight-information}}"
+					],
+					"path": [
+						"EC-CGS",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EC-MYT 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-flight-information}}/EC-MYT/3",
+					"host": [
+						"{{api-flight-information}}"
+					],
+					"path": [
+						"EC-MYT",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EC-MYT 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-flight-information}}/EC-MYT/4",
+					"host": [
+						"{{api-flight-information}}"
+					],
+					"path": [
+						"EC-MYT",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Not exists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-flight-information}}/wdqdeweqw/eswdgrwgfer",
+					"host": [
+						"{{api-flight-information}}"
+					],
+					"path": [
+						"wdqdeweqw",
+						"eswdgrwgfer"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

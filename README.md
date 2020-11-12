@@ -8,6 +8,7 @@ Please read the instructions carefully and if you have question do not hesitate 
 - Java 8
 - Docker
 - Maven 3
+- Postman (Optional)
 
 ## Architecture
 ### Main.java
@@ -38,6 +39,9 @@ That is why I did not add comments on the code.
 
 The code should be self-explanatory or contain a really few lines of comments.
 I just added some lines in order to make it more explicit.
+
+## Postman
+There is a Postman collection for testing purposes ```immfly-java-challenge.postman_collection.json```
 
 ## Api Error Handling
 Error handling has not been applied due to a lack of time.
