@@ -62,12 +62,12 @@ You can access Redis Commander and check all the Redis keys through:
 
 ```http://localhost:8081/```
 
-### Local All Dockerized
+### Production All Dockerized
 This environment simulates all the services inside Docker.
 
 Steps:
 
-```mvn clean package -Plocaltest```
+```mvn clean package -Pproduction```
 
 
 ```docker-compose build --no-cache```
