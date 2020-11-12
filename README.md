@@ -4,6 +4,11 @@
 I know there are several ways to improve this, but I have dedicated a lot of time in order to make it professional.
 Please read the instructions carefully and if you have question do not hesitate to contact me. Developer information has been set on pom.xml
 
+## Setup
+- Java 8
+- Docker
+- Maven 3
+
 ## Architecture
 ### Main.java
 Starts the Spring Boot Application
