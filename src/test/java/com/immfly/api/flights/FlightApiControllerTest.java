@@ -17,7 +17,7 @@ public class FlightApiControllerTest {
     private FlightApiController flightApiController;
 
     @Test
-    public void testEnv() {
+    public void getFlight() {
         assertThat(flightApiController.getFlight("1", "2")).isEqualTo("12");
     }
 }

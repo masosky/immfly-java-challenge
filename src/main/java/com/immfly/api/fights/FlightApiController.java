@@ -1,21 +1,20 @@
 package com.immfly.api.fights;
 
-import com.immfly.redis.RedisService;
+import com.immfly.api.fights.handlers.GetFlightHandler;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import redis.clients.jedis.Jedis;
 
 @RestController
 @RequestMapping(path = "/v1/flight-information")
 public class FlightApiController implements FlightApiContract {
     @Autowired
-    RedisService redisService;
+    GetFlightHandler getFlightHandler;
+
     @Override
-    @RequestMapping(value = "/{tail-number}/{flight-number}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{tail-number}/{flight-number}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public String getFlight(@PathVariable("tail-number") String tailNumber, @PathVariable("flight-number") String flightNumber) {
-        Jedis jedis = redisService.getJedisInstance();
-        // TODO go to Redis Cache and retrieve flights
-        return tailNumber + flightNumber;
+    public Object getFlight(@PathVariable("tail-number") final String tailNumber, @PathVariable("flight-number") final String flightNumber) {
+        return getFlightHandler.handleGetFlight(tailNumber, flightNumber);
     }
 }

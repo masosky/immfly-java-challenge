@@ -11,21 +11,23 @@ import org.springframework.stereotype.Service;
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Jedis;
 
+import java.util.Objects;
+
 @Service
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 @Configurable
 public class RedisService {
     private static final Logger logger = LogManager.getLogger(RedisService.class);
 
-    private String host;
-    private Integer port;
-    private String password;
+    private final String host;
+    private final Integer port;
+    private final String password;
 
     private Jedis jedis;
 
     public RedisService(@Autowired Environment environment) {
         this.host = environment.getProperty("REDIS_HOST");
-        this.port = Integer.valueOf(environment.getProperty("REDIS_PORT"));
+        this.port = Integer.valueOf(Objects.requireNonNull(environment.getProperty("REDIS_PORT")));
         this.password = environment.getProperty("REDIS_PASSWORD");
     }
 
