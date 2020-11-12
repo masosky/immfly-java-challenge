@@ -23,7 +23,7 @@ public class ExternalFlightService {
 
     private static final List<String> TAIL_NUMBER_LIST = Arrays.asList("EC-AIN", "EC-CGS", "EC-MYT");
     // Save all flight information in Cache
-    private static final Map<String, List<FlightInformationResponse>> FLIGHTS_INFORMATION = new HashMap();
+    private static final Map<String, List<FlightInformationResponse>> FLIGHTS_INFORMATION = new HashMap(3);
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     static {
@@ -38,7 +38,7 @@ public class ExternalFlightService {
                 logger.error("Error when loading FlightInformation Resources in Cache", e);
             }
         }
-        logger.debug("All FlightInformation Resources ahs been loaded successfully in Cache");
+        logger.debug("All FlightInformation Resources have been loaded successfully in Cache");
         logger.debug("This Service emulates a real API Service");
     }
 
