@@ -43,6 +43,8 @@ I just added some lines in order to make it more explicit.
 ## Postman
 There is a Postman collection for testing purposes ```immfly-java-challenge.postman_collection.json```
 
+Apply ```Local.postman_environment.json``` as "Local" Environment
+
 ## Api Error Handling
 Error handling has not been applied due to a lack of time.
 Using @ControllerAdvice for error handling is a good solution in Spring.
